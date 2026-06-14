@@ -1,0 +1,575 @@
+/* Variáveis com a Paleta de Cores: Verde, Amarelo e Azul */
+:root {
+    --primary-green: #1b4d3e;      /* Verde escuro para cabeçalhos e seções robustas */
+    --accent-blue: #0f4c81;        /* Azul tecnológico para botões, destaques e links */
+    --vibrant-yellow: #ffcc00;     /* Amarelo dourado para avisos, tags e contrastes */
+    --light-green: #eef7f4;        /* Fundo suave esverdeado */
+    --light-blue: #e6f0fa;         /* Fundo suave azulado */
+    --dark-text: #2d3748;
+    --light-text: #ffffff;
+    --gray-bg: #f7fafc;
+    --border-color: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dark-text);
+    background-color: var(--gray-bg);
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.small-container {
+    max-width: 800px;
+}
+
+/* Barra de Acessibilidade */
+.accessibility-bar {
+    background-color: var(--primary-green);
+    border-bottom: 2px solid var(--vibrant-yellow);
+    padding: 5px 0;
+    color: var(--light-text);
+    font-size: 12px;
+}
+
+.container-accessibility {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-acc {
+    background: transparent;
+    border: 1px solid var(--light-text);
+    color: var(--light-text);
+    padding: 2px 8px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.btn-acc:hover {
+    background-color: var(--vibrant-yellow);
+    color: var(--primary-green);
+}
+
+/* Header */
+.main-header {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 15px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+}
+
+.logo-bold {
+    color: var(--primary-green);
+    font-weight: 900;
+}
+
+.logo-light {
+    color: var(--accent-blue);
+    font-weight: 400;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--accent-blue);
+}
+
+/* Botões */
+.btn-primary {
+    background-color: var(--accent-blue);
+    color: var(--light-text);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    border: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background-color: #0b355c;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-green);
+    border: 2px solid var(--primary-green);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-green);
+    color: var(--light-text);
+}
+
+.btn-large {
+    padding: 15px 30px;
+    font-size: 16px;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--light-green) 0%, var(--light-blue) 100%);
+    padding: 80px 0;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-tag {
+    background-color: var(--vibrant-yellow);
+    color: #000;
+    font-weight: 700;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    color: var(--primary-green);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.hero-trust {
+    display: flex;
+    gap: 20px;
+    font-weight: 600;
+    color: var(--primary-green);
+}
+
+.hero-visual {
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-bottom: 5px solid var(--accent-blue);
+}
+
+.hero-card {
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 280px;
+    border-left: 5px solid var(--vibrant-yellow);
+}
+
+.card-stat {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent-blue);
+}
+
+/* Seção Paraná */
+.parana-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.parana-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.parana-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-bottom: 5px solid var(--vibrant-yellow);
+}
+
+.parana-text {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #4a5568;
+}
+
+.parana-badges {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.badge-item {
+    background-color: var(--light-blue);
+    padding: 10px 15px;
+    border-radius: 5px;
+    border-left: 4px solid var(--accent-blue);
+}
+
+/* Outras Seções Genericas */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    color: var(--primary-green);
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Benefícios */
+.benefits-section {
+    padding: 80px 0;
+    background-color: var(--gray-bg);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.benefit-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    border-top: 4px solid var(--primary-green);
+}
+
+.benefit-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.benefit-title {
+    margin-bottom: 10px;
+    color: var(--primary-green);
+}
+
+/* Soluções (Carrossel) */
+.solutions-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.carousel-container {
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    padding: 40px;
+    background: var(--light-green);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn-nav {
+    background: var(--accent-blue);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carousel-indicators {
+    display: flex;
+    gap: 8px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background: var(--accent-blue);
+}
+
+/* Depoimentos */
+.testimonials-section {
+    padding: 80px 0;
+    background-color: var(--gray-bg);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    border-left: 5px solid var(--accent-blue);
+}
+
+.testimonial-quote {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-weight: 700;
+    color: var(--primary-green);
+}
+
+.author-meta {
+    font-size: 13px;
+    color: #777;
+}
+
+/* FAQ */
+.faq-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 10px;
+}
+
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    background: var(--gray-bg);
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    color: var(--primary-green);
+}
+
+.accordion-content {
+    padding: 15px;
+    display: none;
+    background: #fff;
+}
+
+/* CTA Formulário */
+.cta-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-blue) 100%);
+    color: white;
+}
+
+.cta-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cta-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.cta-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--vibrant-yellow);
+}
+
+.cta-form .form-group {
+    margin-bottom: 15px;
+}
+
+.cta-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.cta-form input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    background: rgba(255,255,255,0.9);
+    color: #333;
+}
+
+.cta-form button {
+    background-color: var(--vibrant-yellow);
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.cta-form button:hover {
+    background-color: #e6b800;
+}
+
+.form-success-message {
+    margin-top: 20px;
+    background-color: rgba(27, 77, 62, 0.9);
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid var(--vibrant-yellow);
+}
+
+/* Footer */
+.main-footer {
+    background-color: #111;
+    color: #aaa;
+    padding: 40px 0;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-brand .logo-bold {
+    color: var(--vibrant-yellow);
+}
+
+.footer-brand .logo-light {
+    color: #fff;
+}
+
+.footer-copy {
+    margin-top: 10px;
+}
+
+.footer-tagline {
+    font-style: italic;
+    color: #fff;
+}
+
+/* Responsividade Básica */
+@media(max-width: 768px) {
+    .hero-container, .parana-container, .benefits-grid, .testimonials-grid, .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .hero-actions {
+        justify-content: center;
+    }
+    .container-accessibility {
+        justify-content: center;
+    }
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
